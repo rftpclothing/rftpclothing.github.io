@@ -1,0 +1,14 @@
+#wrapper, img {
+    height:100%;
+    width:100%;
+}
+#topleft{
+  position:absolute;
+  left:0;
+  top:0;
+}
+#topright {
+  position:absolute;
+  right:0;
+  top:0;
+}
