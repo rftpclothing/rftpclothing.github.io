@@ -1,0 +1,98 @@
+/*header {
+  position: relative;
+}*/
+.container-header {
+  position: sticky;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.container-content {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+.container-posts {
+  display: block;
+  width: 33%;
+  height: auto;
+  float: left;
+  marg
+}
+.overlay {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #EEE;
+}
+.container-content:hover .overlay {
+  opacity: .6;
+}
+.text {
+  font-family: "acumin-pro-semi-condensed";
+  font-style: italic;
+  font-weight: 900;
+  position: relative;
+  color: black;
+  font-size: 20px;
+  bottom: 50%;
+  text-align: center;
+}
+.semibold-black {
+  font-family: "acumin-pro-semi-condensed";
+  color:black;
+  font-style:italic;
+  font-weight:900;
+  font-size: 20px;
+  margin: 0;
+}
+.center {
+  position: relative;
+  float: right;
+  width: 60px;
+}
+.topright {
+  right 0;
+  top 0;
+  position: relative;
+}
+.image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-right: 1%;
+}
+a:link{
+  color:black;
+  text-decoration: none;
+}
+a:visited{
+  color: black;
+  text-decoration: none;
+}
+a:hover{
+  color: yellow;
+  text-decoration: none;
+}
+a:active{
+  color: blue;
+  text-decoration: none;
+}
+h1 {
+  font-family: "acumin-pro-semi-condensed";
+  color:black;
+  font-style:italic;
+  font-weight:700;
+  font-size: 40px;
+  margin: 0;
+}
