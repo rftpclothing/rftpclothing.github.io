@@ -297,3 +297,13 @@ a:active{
   color: blue;
   text-decoration: none;
 }
+p {
+	margin-bottom: 0;
+	display: inline;
+}
+h1 {
+	display: inline;
+}
+img {
+	float: right;
+}
