@@ -31,6 +31,19 @@ main img {
   border: solid grey 1px;
   margin: 5px;
 }
+p a {
+  text-decoration: underline;
+  color: black;
+  font-family: "acumin-pro-semi-condensed", sans-serif;
+  font-size: 15pt;
+  font-weight: 700;
+  text-align: center;
+
+}
+p a:hover {
+  text-decoration: underline;
+  color: grey;
+}
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -41,9 +54,7 @@ main img {
   grid-template-rows: 200px 100px max-content 40px;
   grid-gap: 5px;
 }
-/* Dropdown Button */
 .dropbtn {
-    /*background-color: #4CAF50;*/
     font-family: "acumin-pro-semi-condensed", sans-serif;
     font-style: italic;
     font-weight: 800;
@@ -52,13 +63,10 @@ main img {
     border: none;
     margin: 0;
 }
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
 }
-
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -67,19 +75,15 @@ main img {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu on hover */
+.dropdown-content a:hover {
+  background-color: #ddd
+}
 .dropdown:hover .dropdown-content {
     display: block;
     font-family: "acumin-pro-semi-condensed", sans-serif;
@@ -87,10 +91,15 @@ main img {
     font-weight: 700;
     font-size: 12pt;
 }
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    /*background-color: #3e8e41;*/
+.title {
+  font-family: "acumin-pro-semi-condensed", sans-serif;
+  font-weight: 800;
+  font-size: 20pt;
+  text-align: center;
+  margin: 500px 0 0 0;
+}
+.link {
+  text-align: center;
 }
 #header {
   display: inline;
