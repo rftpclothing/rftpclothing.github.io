@@ -1,0 +1,88 @@
+/* The line below imports most of the styles for your chosen theme.
+It is recommended that you leave this here to receive bug fixes or additions to this theme. */
+
+@import url('/assets/theme_cooper.css');
+
+/* The styles below are automatically turned into controls on the Design Bar.
+For more information, see the FAQ. */
+
+/* Colors */
+
+.store_name a:link, .store_name a:hover, .store_name a:visited {
+  color: #222222;                   /*: Store Name :*/
+}
+
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6, #product_name, #price {
+  color: #222222;                   /*: Titles :*/
+}
+
+body, #main .faq h2, .label label, #product .better-select-selected-label {
+  color: #6d6f71;                   /*: Text :*/
+}
+
+a:link, a:visited, a:active, #footer a, .no-products p {
+  color: #222222;                   /*: Links :*/;
+}
+
+a:hover, #sidebar ul li.current a, body.faq #buttons .faqs, body.contact #buttons .contact_us {
+  color: #888888;                   /*: Link Hover :*/
+}
+
+#main .button, #main button, #items_in_cart, #promotion, #variant_id_chzn .result-selected, #variant_id_chzn .result-selected.highlighted, .stock-remaining, .stock-sold {
+  background-color: #222222;        /*: Buttons :*/
+}
+
+#main .button, #main button, #items_in_cart a, #promotion, #variant_id_chzn .result-selected, #variant_id_chzn .result-selected.highlighted {
+  color: #ffffff;                   /*: Button Text :*/
+}
+
+hr, #thumbs a:hover, #product #variant_id, #footer, #product #variant_id_chzn > * {
+  border-color: #ccc;               /*: Lines :*/
+}
+
+.product .flag.status, #product .status {
+  background-color: #ccc;           /*: Product Status :*/
+}
+
+#content, #header, #footer{
+  background-color: #FFFFFF;        /*: Content Background :*/
+}
+
+/* Layout */
+
+#header .store_name {
+  font-family: "acumin-pro-semi-condensed", "Helvetica Neue", Helvetica, Arial, sans-serif; /*: Store Name Font :*/
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;                     /*: Store Name Alignment :*/
+}
+
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6, #product_name{
+  font-family: Helvetica Neue, Arial, Helvetica; /*: Title Font :*/
+}
+
+#banner {
+  text-align:center;                /*: Header Image Alignment :*/
+}
+
+
+body{
+  background-color: #FFFFFF;          /*: Body Background :*/
+  font-family: Helvetica Neue, Arial, Helvetica; /*: Body Font :*/
+  font-style: italic;
+  background-attachment: scroll;      /*: Background Attachment :*/
+  background-repeat: repeat;          /*: Background Image Repeat :*/
+  background-position: top center;    /*: Background Image Position :*/
+}
+
+/* These are non-CSS custom settings for the theme. It's best to leave these alone.
+To create custom Design Bar attributes for your theme, view this help article:
+http://support.storenvy.com/customer/portal/articles/1226033-how-do-i-add-settings-to-the-store-owner-ui- */
+
+storenvy {
+  storenvy-featured-collection: collection-all;    /*: Featured Collection :*/
+  storenvy-use-theme-background: if-false;         /*: Use Theme Background :*/
+  storenvy-show-store-name: if-true;               /*: Show Store Name :*/
+  storenvy-show-logo: if-true;                     /*: Show Logo :*/
+  storenvy-show-stock-bars: if-false;              /*: Show Stock Bars :*/
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Test NEW SITE BOIIIIIIS</title>
+    <link rel="stylesheet" href="css/teststyle.css"/>
+    <link rel="icon" href="black.png"/>
+    <link rel="stylesheet" href="https://use.typekit.net/qkv2zui.css">
+    <link href="{{ theme | theme_css_url }}" rel="stylesheet" />
+  </head>
+  <body class="container">
+    <div class="grid">
+      <header id="header">
+        <p>RFTP</p>
+      </header>
+      <nav id="nav">
+        <ul>
+          <div class="dropdown">
+          <li id="store" class="dropbtn"><a href="#">STORE</a></li>
+            <div class="dropdown-content">
+              <a href="#">All Clothes</a>
+              <a href="#">Shirts</a>
+              <a href="#">Sweatshirts</a>
+              <a href="#">RFTP World</a>
+            </div>
+          </div>
+          <div class="dropdown">
+          <li id="photos" class="dropbtn"><a href="#">PHOTOS</a></li>
+            <div class="dropdown-content">
+              <a href="testoregon.html">Oregon</a>
+              <a href="testspringbreak.html">Spring Break</a>
+              <a href="testhiddenlake.html">Hidden Lake</a>
+              <a href="testroof.html">Miami Roof</a>
+            </div>
+          </div>
+          <div class="dropdown">
+          <li id="videos" class="dropbtn"><a href="#">VIDEOS</a></li>
+            <div class="dropdown-content">
+              <a href="testexordium.html">Exordium</a>
+              <a href="testwanderlust.html">Wanderlust</a>
+            </div>
+          </div>
+          <div class="dropdown">
+          <li id="playlists" class="dropbtn"><a href="#">PLAYLISTS</a></li>
+            <div class="dropdown-content">
+              <a href="testnightdrive.html">Night Drive</a>
+              <a href="#">Young Gods</a>
+            </div>
+          </div>
+        </ul>
+      </nav>
+      <main id="content">
+        {% if theme.featured_collection != blank %}
+          {% if theme.featured_collection.products != blank %}
+            <ul class="products row">
+              {% for product in theme.featured_collection.products %}
+              <li class="product col3" id="products_{{product.id}}">
+                <div class="flags">
+                  {% if product.on_sale %}<div class="on_sale flag status">On Sale</div>{% endif %}
+                  {% if product.preorder %}<div class="preorder flag status">Preorder</div>{% endif %}
+                  {% if product.coming_soon %}<div class="coming_soon flag status">Coming Soon</div>{% endif %}
+                  {% if product.sold_out %}<div class="sold_out flag">Sold Out</div>{% endif %}
+                </div>
+                <a href="{{product.url}}">
+                  <img src="{{ product.photo.url_400sq }}" alt="{{ product.photo.alt | escape }}" class="product-photo" />
+                  <p class="product_name">
+                    {{ product.name }}
+                  </p>
+                  <span class="product_price">
+                    {{ product.price | money_with_sign }}
+                  </span>
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% if pagination.active %}
+              <div class="pagination">
+                {{ pagination.default_links }}
+              </div>
+            {% endif %}
+          {% else %}
+            <div class="no-products">
+              <p>Nothing here yet.</p>
+            </div>
+          {% endif %}
+
+        {% else %}
+
+          {% if collections.nav.size > 0 %}
+            <ul class="collections">
+              {% for collection in collections.nav %}
+                {% if collection.name != 'All Products' %}
+                  <li class="collection" id="collection_{{collection.id}}">
+                    <a href="{{collection.url}}">
+                      <p class="collection_name">
+                        {{ collection.name | escape }}
+                      </p>
+                      <div class="img-wrapper">
+                      {% if collection.has_image? %}
+                        <img src="{{ collection.medium_image }}" alt="{{ collection.name | escape }}"/>
+                      {% elsif collection.products.size > 0 and collection.products.first.photos.size > 0 %}
+                        <img src="{{ collection.products.first.photo.store_collection_cover }}" alt="{{ collection.name | escape_html }}" class="first-product-photo"/>
+                      {% else %}
+                        <img class="missing-collection-img" alt="{{ collection.name | escape }}" src="{{ collection.default_image }}" />
+                      {% endif %}
+                      </div>
+                    </a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+
+          {% elsif products.all.size > 0 %}
+            <ul class="products row">
+              {% for product in products.all %}
+                <li class="product col3" id="products_{{product.id}}">
+                  <div class="flags">
+                    {% if product.on_sale %}<div class="on_sale flag status">On Sale</div>{% endif %}
+                    {% if product.preorder %}<div class="preorder flag status">Preorder</div>{% endif %}
+                    {% if product.coming_soon %}<div class="coming_soon flag status">Coming Soon</div>{% endif %}
+                    {% if product.sold_out %}<div class="sold_out flag">Sold Out</div>{% endif %}
+                  </div>
+                  <a href="{{product.url}}">
+                    <img src="{{ product.photo.url_400sq }}" alt="{{ product.photo.alt | escape }}" class="product-photo" />
+                    <p class="product_name">
+                      {{ product.name }}
+                    </p>
+                    <span class="product_price">
+                      {{ product.price | money_with_sign }}
+                    </span>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+            {% if pagination.active %}
+              <div class="pagination">
+                {{ pagination.default_links }}
+              </div>
+            {% endif %}
+          {% else %}
+            <div class="no-products">
+              <p>Check back soon.</p>
+            </div>
+          {% endif %}
+        {% endif %}
+      </main>
+      <footer id="footer">
+        <p>[DONT LOOK DOWN]</p>
+      </footer>
+    </div>
+  </body>
+</html>

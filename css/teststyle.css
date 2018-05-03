@@ -1,0 +1,155 @@
+ul {
+  padding-left: 0;
+  list-style: none;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+li {
+  display: block;
+  margin: 0;
+}
+.dropdown-content a {
+      display: inline-block;
+      padding: 10px;
+      background-color: #eee;
+      color: #222;
+      text-decoration: none;
+}
+li  a {
+  text-decoration: none;
+  color: red;
+}
+li  a:hover {
+  text-decoration: none;
+  color: black;
+}
+main img {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: auto;
+  border: solid grey 1px;
+  margin: 5px;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: 200px 100px max-content 40px;
+  grid-gap: 5px;
+}
+/* Dropdown Button */
+.dropbtn {
+    /*background-color: #4CAF50;*/
+    font-family: "acumin-pro-semi-condensed", sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    color: white;
+    font-size: 20pt;
+    border: none;
+    margin: 0;
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    font-family: "acumin-pro-semi-condensed", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 12pt;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    /*background-color: #3e8e41;*/
+}
+#header {
+  display: inline;
+  grid-row: 1/2;
+  grid-column: 1/5;
+  background-color: red;
+  margin: 100px auto 10px;
+  padding: 0px 15px 0px 15px;
+  font-family: "acumin-pro-semi-condensed", sans-serif;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 40pt;
+
+}
+#header p {
+  display: inline;
+}
+/* #nav {
+  grid-row: 2/3;
+  grid-column: 1/5;
+  margin: 0 auto;
+} */
+#store {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+#photos {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+#videos {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+#playlists {
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+#content {
+  grid-row: 3/4;
+  grid-column: 1/5;
+}
+#footer {
+  grid-row: 4/5;
+  grid-column: 1/5;
+  margin: 0 auto;
+  font-family: "acumin-pro-semi-condensed", sans-serif;
+  font-weight: 800;
+}
+#footer div {
+  display: inline;
+  text-decoration: line-through;
+}
+#gods {
+  position: relative;
+  float: right;
+  grid-template-columns: 3/5;
+  grid-template-rows: 3/4;
+  height: auto;
+  width: 474px;
+  margin: 0;
+}
