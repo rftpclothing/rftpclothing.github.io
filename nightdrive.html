@@ -2,31 +2,68 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet "href="https://use.typekit.net/qkv2zui.css"/>
+    <title>Night Drive</title>
+    <link rel="stylesheet" href="css/teststyle.css"/>
     <link rel="icon" href="black.png"/>
-    <style>
-    body {
-        background-color: black;
-        background-image: url('photos/nightdrive.jpg');
-        min-height: 100%;
-        background-position: center;
-        background-size: cover;
-    }
-    p {
-      font-family: "acumin-pro-semi-condensed", sans-serif;
-      font-weight: 700;
-      color: white;
-    }
-    .center {
-      text-align: center;
-    }
-    </style>
+    <link rel="stylesheet" href="https://use.typekit.net/qkv2zui.css">
+    <link rel="stylesheet" href="css/lightbox.css"/>
   </head>
-  <body class="center">
-    <header class="center">
-      <a href="media.html"><img src="white.png" alt="whitelogo" width="100px" height="auto"/></a>
-    </header>
-    <iframe src="https://open.spotify.com/embed/user/joemose/playlist/7sers88UhvWE3Xm787HTIk" width="960px" max-width="960px" height="900px" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    <p>[FOR EXPLICIT USE WHILE DRIVING BETWEEN THE HOURS OF 12 AND 4 AM]</p>
+  <body class="container grid">
+    <!-- <div class="grid"> -->
+      <header id="header">
+        <p>RFTP</p>
+      </header>
+      <!--navigation-->
+      <ul id="store" class="dropdown">
+        <li class="dropbtn"><a href="#">STORE</a>
+          <div class="dropdown-content">
+            <a href="http://rftp.storenvy.com">All Clothes</a>
+            <a href="#">RFTP World</a>
+          </div>
+        </li>
+      </ul>
+      <ul id="photos" class="dropdown">
+        <li class="dropbtn"><a href="#">PHOTOS</a>
+          <div class="dropdown-content">
+            <a href="oregon.html">Oregon</a>
+            <a href="springbreak.html">Spring Break</a>
+            <a href="hiddenlake.html">Hidden Lake</a>
+            <a href="roof.html">Miami Roof</a>
+          </div>
+        </li>
+      </ul>
+      <ul id="videos" class="dropdown">
+        <li class="dropbtn"><a href="#">VIDEOS</a>
+          <div class="dropdown-content">
+            <a href="exordium.html">Exordium</a>
+            <a href="wanderlust.html">Wanderlust</a>
+          </div>
+        </li>
+      </ul>
+      <ul id="playlists" class="dropdown">
+        <li class="dropbtn"><a href="#">PLAYLISTS</a>
+          <div class="dropdown-content">
+            <a href="nightdrive.html">Night Drive</a>
+            <a href="gods.html">Young Gods</a>
+          </div>
+        </li>
+      </ul>
+      <!--end navigation-->
+      <main id="content">
+        <iframe src="https://open.spotify.com/embed/user/joemose/playlist/7sers88UhvWE3Xm787HTIk" width="474" height="540"></iframe>
+        <a href="img/nightdrive.jpg" data-lightbox="nightdrive"><img src="img/nightdrive.jpg" alt="nightdrive" id="gods"/></a>
+      </main>
+      <footer id="footer">
+        <p>[DONT LOOK DOWN]</p>
+      </footer>
+    <!-- </div> -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+    </script>
   </body>
 </html>
